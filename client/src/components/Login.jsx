@@ -9,15 +9,16 @@ const Login = () => {
 
   const Loginhandel = (e) => {
     e.preventDefault();
-    // Check if the entered email and password match the stored data
-    if (email === logindata.id && password === logindata.password) {
+    const user = logindata.find(
+      (data) => email === data.id && password === data.password
+    );
+    console.log(user);
+    if (user) {
       console.log("Login successful!");
       setLogin(true);
-      navegate("/dashboard"); // Redirect to the dashboard or perform any other action
-
-      // Redirect to the dashboard or perform any other action
+      navegate("/dashboard");
     } else {
-      alert("Invalid id or password. Please try again.");
+      alert("Login failed");
     }
   };
   return (
