@@ -88,5 +88,15 @@ export const mockData = [
     "Partner code": "P-010",
     configurator: "Aarav Sharma",
     region: "India",
-  }
+  },
+  {
+    id: "bhqecj06",
+    "Fs no": 499,
+    status: "processing",
+    Profile: "aarav@example.com",
+    "Partner code": "P-010",
+    configurator: "Aarav Sharma",
+    region: "India",
+  },
+  
 ];

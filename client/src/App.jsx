@@ -1,22 +1,23 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
 import Login from "./components/Login";
-import { Route, Routes } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import ProfileDetails from "./pages/ProfileDetails";
 import RequestProfile from "./pages/RequestProfile";
+import Layout from "./Layout/Layout";
+
+
 
 const App = () => {
   return (
-    <div>
-      {/* <Login /> */}
-
-      <Routes>
-        <Route path="/" element={<Login />} />
+   <Routes>
+      <Route path="/" element={<Login />} />
+      <Route element={<Layout />}>
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/profile/:id" element={<ProfileDetails />} />
         <Route path="/RequestProfile" element={<RequestProfile />} />
-      </Routes>
-    </div>
+      </Route>
+    </Routes>
   );
 };
 
